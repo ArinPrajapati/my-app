@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
-import {
-  Route,
-  BrowserRouter as Router,
-  Routes,
-} from "react-router-dom";
 import './App.css';
-import AboutUs from './componets/AboutUs';
 import Alert from './componets/Alert';
 import Nabar from './componets/Nabar';
 import TextForm from './componets/TextForm';
-
 
 function App() {
 
@@ -65,8 +58,9 @@ function App() {
 
 
 
-    <>
-
+    <> 
+    
+      {/* 
       <Router>
 
         <Nabar title="TextWizard" tabOne="Home" tabTwo="About US" mode={Mode} toggleMode={toggleMode} colorTheme={colorForTheme} />
@@ -75,7 +69,7 @@ function App() {
         <Alert alert={alert} />
 
         <Routes>
-          <Route exact path="/home" element={<TextForm howAlerts={showAlerts} heading="Enter Text to Analyze" mode={Mode} colorTheme={colorChoice} />}>
+          <Route exact path="/" element={<TextForm howAlerts={showAlerts} heading="Enter Text to Analyze" mode={Mode} colorTheme={colorChoice} />}>
 
           </Route>
           <Route exact path="/about" element={<AboutUs />}>
@@ -83,7 +77,15 @@ function App() {
           </Route>
         </Routes>
 
-      </Router>
+      </Router> */}
+
+
+      <Nabar title="TextWizard" tabOne="Home" tabTwo="About US" mode={Mode} toggleMode={toggleMode} colorTheme={colorForTheme} />
+
+
+      <Alert alert={alert} />
+      <TextForm howAlerts={showAlerts} heading="Enter Text to Analyze" mode={Mode} colorTheme={colorChoice} />
+
 
 
     </>
